@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SubmitPanelSkin" width="1600" height="1200" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="15e794d5442" ></w:Config>
+	<e:Rect width="1600" height="1200" x="0" y="0" fillAlpha="0.8" scaleX="1" scaleY="1" locked="true"/>
+	<e:Group id="group1" width="822.73" height="990.79" x="417.15" y="176" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Rect id="group1_rect" width="605.94" height="533.64" x="113.43" y="47.58" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x1c1b1b" fillAlpha="81" scaleX="1" scaleY="1"/>
+		<e:Label id="tip_label" text="" x="171.51" y="59.36" anchorOffsetX="0" width="539.46" anchorOffsetY="0" height="48.13" size="18" scaleX="1" scaleY="1"/>
+		<e:Label id="content_label" text="" x="158.07" y="137.63" anchorOffsetX="0" width="534.11" anchorOffsetY="0" height="254.82" lineSpacing="10" size="20" backgroundColor="0x262525" borderColor="0x918c8c" background="false" scaleX="1" scaleY="1"/>
+		<e:Group id="group1_group1" width="596" height="166" x="117" y="412" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Rect width="418" height="44" x="132" y="20.03" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x898888" scaleX="1" scaleY="1"/>
+			<e:EditableText id="name_label" width="370.64" height="31" text="" x="158.68" y="24" anchorOffsetX="0" anchorOffsetY="0" background="false" textColor="0x0a0909" scaleX="1" scaleY="1" backgroundColor="0xaaa5a5"/>
+			<e:Label text="姓名：" x="46.72" y="24.03" anchorOffsetY="0" height="33" scaleX="1" scaleY="1"/>
+			<e:Button id="sure_button" label="确定" x="427.86" y="94.4" scaleX="1" scaleY="1"/>
+			<e:Button id="cancel_button" label="取消" x="61.32" y="96.36" scaleX="1" scaleY="1"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="group2" width="518.18" height="453.03" x="567.88" y="341.04" anchorOffsetX="0" anchorOffsetY="0" visible="false">
+		<e:Rect width="523.94" height="448.4" x="-4" y="0.83" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x1C1B1B" fillAlpha="81" scaleX="1" scaleY="1"/>
+		<e:Label text="系统检测到之前您已经提交过数据，重复提交会顶替之前的操作，是否继续！" x="78" y="107" anchorOffsetX="0" width="364" anchorOffsetY="0" height="164" lineSpacing="8" size="20"/>
+		<e:Button id="cancel_button1" label="取消" x="78" y="342"/>
+		<e:Button id="goon_button" label="继续" x="356" y="342"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OrderListRenderSkin" width="1000" height="130" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="15e7abd4163" ></w:Config>
+	<e:Label id="name_label" text="" x="65" y="44" anchorOffsetX="0" width="178" anchorOffsetY="0" height="26" size="20" verticalAlign="middle"/>
+	<e:Label id="content_label" text="" x="296" y="6" anchorOffsetX="0" width="479" anchorOffsetY="0" height="115" size="20" lineSpacing="10" textAlign="left" verticalAlign="middle"/>
+	<e:Label id="money_label" text="" x="829" y="44" anchorOffsetX="0" width="152" size="20" height="26" verticalAlign="middle"/>
+	<e:Rect id="line_rect" width="1000" height="1" y="127" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x969393"/>
+</e:Skin>

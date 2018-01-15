@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>欢迎点餐</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+    <script src="resource/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" ></script>  
+    <script src="resource/js/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script> 
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/eui/eui.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="promise/promise.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script egret="lib" src="main.min.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="showAll"
+         data-frame-rate="30"
+         data-content-width="1600"
+         data-content-height="1200"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+    <script>
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": 0 //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * "retina": //是否基于devicePixelRatio缩放画布
+         * }
+         **/
+        egret.runEgret({renderMode:"webgl", audioType:0});
+
+        $(document).ready(function(){  
+            //得到鼠标滚轮的事件处理  
+            //var nowPage = 0;  
+            $(document).mousewheel(function(event,delta){  
+                //console.log(delta);//滚轮往上滚delta=1，往下滚delta=-1  
+                // if(delta == 1)
+                // {  
+				// 	egret.log("往上滚了");  					
+                // }  
+                // if(delta == -1)
+                // {  
+				// 	egret.log("往下滚了"); 					
+                // }  
+                window['platformInstance'].jsCallFun("mousewheel",delta);
+                //问题？  
+                //鼠标向上滚delta=1，是数值增大的过程，而用户的习惯是序号减小的过程  
+                //鼠标向下滚delta=-1，是数值减小的过程，而用户的习惯是序号增大的过程  
+                //解决：相反数  
+                // nowPage = nowPage - delta;  
+                // if(nowPage<0){  
+                //     nowPage=0;  
+                // }  
+                // if(nowPage>3){  
+                //     nowPage=3;  
+                // }  
+                // egret.log(nowPage);               
+            });  
+        });  
+    </script>
+    <script>
+		var u = navigator.userAgent;
+    	//alert(u);
+    	if(u.indexOf('UCBrowser') > -1) {
+    	   //alert("UCBrowser");
+    	   egret.runEgret({renderMode:"canvas"});
+    	}else{
+    	   egret.runEgret({renderMode:"webgl"});
+    		//egret.runEgret({renderMode:"canvas"});
+    	}
+	</script>
+    <script>
+        function setCookie(c_name,value,expiredays)
+        {
+            expiredays = 1;
+            var exdate = new Date()
+            exdate.setDate(exdate.getDate() + expiredays)
+            document.cookie = c_name+ "=" +escape(value) + ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+            //getCookie("ChllengeArenaData");
+        }
+
+        //取回cookie
+        function getCookie(c_name)
+        {
+            //alert(c_name + "========" + document.cookie);
+            var cookieData = "";
+            if (document.cookie.length > 0)
+            {
+                c_start = document.cookie.indexOf(c_name + "=")
+                if (c_start != -1)
+                { 
+                    
+                    c_start = c_start + c_name.length + 1 
+                    c_end = document.cookie.indexOf(";",c_start)
+                    if (c_end == -1) {
+                        c_end = document.cookie.length
+                    }
+                    cookieData = unescape(document.cookie.substring(c_start,c_end));
+                } 
+                
+            }
+            //alert(c_name + ": " + cookieData);
+            window['platformInstance'].jsCallFun("getCookie",cookieData); 
+        }
+    </script>
+</body>
+</html>

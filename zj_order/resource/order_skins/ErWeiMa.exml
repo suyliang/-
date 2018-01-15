@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ErWeiMaSkin" width="1600" height="1200" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="15e7e59ae95" ></w:Config>
+	<e:Rect width="1600" height="1200" x="0" y="0" fillAlpha="0.8" fillColor="0x050505"/>
+	<e:Image width="484.11" height="713.63" x="619.05" y="306" anchorOffsetX="0" anchorOffsetY="0" rotation="0" source="resource/assets/order_source/erweima.jpg"/>
+	<e:Button id="close_button" label="关闭" x="1408.88" y="42.21"/>
+	<e:Label id="tip_txt" text="已经点餐成功，请自觉扫码付款！" x="387" y="163" anchorOffsetX="0" width="931" anchorOffsetY="0" height="78" textAlign="center" textColor="0xf5f7f4"/>
+	<e:Label id="order_data_label" text="" x="136.16" y="360" anchorOffsetX="0" width="434" anchorOffsetY="0" height="593" size="20" lineSpacing="8"/>
+</e:Skin>

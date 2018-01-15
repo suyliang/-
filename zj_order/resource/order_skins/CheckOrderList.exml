@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CheckOrderListSkin" width="1600" height="1200" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="15e7ab8f794" ></w:Config>
+	<e:Rect width="1600" height="1200" x="0" y="0" fillAlpha="0.9"/>
+	<e:Button id="close_button" label="关闭" x="1415.58" y="39" anchorOffsetX="0" width="95.21" anchorOffsetY="0" height="53.56"/>
+	<e:List id="order_list" width="1000" height="1000" x="300" y="186" anchorOffsetX="0" anchorOffsetY="0"/>
+	<e:Label id="all_label" text="" x="604.83" y="92.51" anchorOffsetX="0" width="692.97" anchorOffsetY="0" height="42.97" size="22" textAlign="right"/>
+	<e:RadioButton id="radio1" label="按店名" x="376.94" y="96.32" groupName="shaiXuan"/>
+	<e:RadioButton id="radio2" label="按时间" x="486.44" y="97.86" groupName="shaiXuan"/>
+</e:Skin>
